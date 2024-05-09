@@ -1,8 +1,5 @@
-<script setup>
-import CheckingCashing from "../components/icons/CheckingCashing.vue";
-import Remittance from "../components/icons/Remittance.vue";
-import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
-</script>
+<!-- eslint-disable vue/no-deprecated-html-element-is -->
+
 <template>
   <div class="bg-lightBlue lg:pt-[130px] lg:pb-[132px] md:py-20 sm:py-16 py-14">
     <div class="container xl:max-w-[1344px] xl:px-0 px-3 mx-auto">
@@ -16,70 +13,38 @@ import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
             Fighting the Current with your Finances?
           </h2>
           <p
-            class="sm:pt-[21px] pt-4 font-normal md:text-lg sm:text-base text-sm lg:text-start text-center leading-[140%] tracking-[0.2px] text-lightBlack mb-0"
+            class="sm:pt-[21px] pt-4 font-normal md:text-lg sm:text-base text-sm lg:text-start text-center leading-[140%] tracking-[0.2px] text-lightBlack mb-0 sm:pb-5 pb-2"
           >
             You could be paying separate fees for each financial product you
             use.
           </p>
-          <div class="md:pt-[50px] sm:pt-10 pt-8">
+          <div
+            v-for="(card, index) in cards"
+            :key="index"
+            data-aos="fade-up"
+            :data-aos-delay="index * 200"
+          >
             <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
+              class="bg-white flex md:mt-[30px] sm:mt-6 mt-4 justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div class="flex items-center gap-5">
-                <span><CheckingCashing /></span>
+            
+                <component :is="card.icon" />
                 <p
                   class="font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-black mb-0"
                 >
-                  Check Cashing
+                  {{ card.title }}
                 </p>
               </div>
               <p
                 class="mb-0 font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-darkPink"
               >
-                4.5-9.9% Fee
-              </p>
-            </div>
-          </div>
-          <div class="md:pt-[30px] sm:pt-7 pt-6">
-            <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
-            >
-              <div class="flex items-center gap-5">
-                <span><remittance /></span>
-                <p
-                  class="font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-black mb-0"
-                >
-                  Remittance
-                </p>
-              </div>
-              <p
-                class="mb-0 font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-darkPink"
-              >
-                4.-11.5% Fee
-              </p>
-            </div>
-          </div>
-          <div class="md:pt-[30px] sm:pt-7 pt-6">
-            <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
-            >
-              <div class="flex items-center gap-5">
-                <span><PrepaidCardReload /></span>
-                <p
-                  class="font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-black mb-0"
-                >
-                  Prepaid Card Reload
-                </p>
-              </div>
-              <p
-                class="mb-0 font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-darkPink"
-              >
-                4.-11.5% Fee
+                {{ card.fee }}
               </p>
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-left">
           <img
             src="../assets/images/fighting/finance.webp"
             class="lg:w-[618px] lg:h-[640px] sm:w-[500px] sm:h-[500px] h-[350px]"
@@ -89,3 +54,18 @@ import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
     </div>
   </div>
 </template>
+<script setup>
+import CheckingCashing from "../components/icons/CheckingCashing.vue";
+import Remittance from "../components/icons/Remittance.vue";
+import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
+
+const cards = [
+  { icon: CheckingCashing, title: "Check Cashing", fee: "4.5-9.9% Fee" },
+  { icon: Remittance, title: "Remittance", fee: "4.5-11.5% Fee" },
+  {
+    icon: PrepaidCardReload,
+    title: "Prepaid Card Reload",
+    fee: "4.5-11.5% Fee",
+  },
+];
+</script>

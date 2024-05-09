@@ -4,17 +4,17 @@
       class="container xl:max-w-[1282px] px-3 mx-auto lg:pb-[150px] md:pb-20 sm:pb-16 pb-14"
     >
       <div
-        class="flex xl:gap-[75px] gap-12 lg:flex-row flex-col-reverse justify-center items-center"
+        class="flex xl:gap-[75px] gap-12 lg:flex-row flex-col-reverse justify-center items-center" 
       >
         <div
-          class="w-full flex lg:justify-start justify-center lg:max-w-[600px]"
+          class="w-full flex lg:justify-start justify-center lg:max-w-[600px]" data-aos="fade-right"
         >
           <img
             src="../assets/images/swimming/swimming-upstream.webp"
             class="md:w-[600px] sm:w-[450px] md:h-[421px] sm:h-[350px] h-[300px]"
           />
         </div>
-        <div class="lg:max-w-[582px] w-full">
+        <div class="lg:max-w-[582px] w-full" data-aos="fade-left">
           <h2
             class="font-bold lg:text-[50px] md:text-[40px] sm:text-[30px] text-[28px] lg:text-start text-center leading-[120%] text-lightBlack"
           >

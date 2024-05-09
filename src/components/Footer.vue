@@ -1,9 +1,3 @@
-<script setup>
-import Facebook from "../components/icons/Facebook.vue";
-import Twitter from "../components/icons/Twitter.vue";
-import Instagram from "../components/icons/Instagram.vue";
-import linkedIn from "../components/icons/LinkedIn.vue";
-</script>
 <template>
   <div class="bg-lightBlack lg:pt-[104px] md:pt-20 sm:pt-16 pt-14">
     <div
@@ -11,11 +5,12 @@ import linkedIn from "../components/icons/LinkedIn.vue";
     >
       <div class="flex justify-between flex-wrap md:gap-20 gap-14">
         <div>
-          <a href="#"
-            ><img
+          <a href="#">
+            <img
               src="../assets/images/footer/footer-logo.png"
               class="w-[128px] h-[50px]"
-          /></a>
+            />
+          </a>
           <p
             class="md:pt-[50px] sm:pt-10 pt-7 text-white mb-0 uppercase ff_inter font-bold md:text-[22px] sm:text-[20px] text-lg leading-[170%] tracking-[-0.11px]"
           >
@@ -23,97 +18,68 @@ import linkedIn from "../components/icons/LinkedIn.vue";
           </p>
           <div class="flex gap-3 items-center md:pt-5 sm:pt-4 pt-3">
             <a
-              href="https://www.facebook.com/"
+              v-for="(item, index) in socialMediaIcons"
+              :key="index"
+              :href="item.url"
               target="blank"
               class="social_icon"
-              ><Facebook
-            /></a>
-            <a href="https://twitter.com/" target="blank" class="social_icon"
-              ><Twitter
-            /></a>
-            <a
-              href="https://www.instagram.com/"
-              target="blank"
-              class="social_icon"
-              ><Instagram
-            /></a>
-            <a
-              href="https://www.linkedin.com/"
-              target="blank"
-              class="social_icon"
-              ><linkedIn
-            /></a>
+            >
+              <component :is="item.icon" />
+            </a>
           </div>
         </div>
         <ul>
           <li
-            class="sm:pb-3 text-white font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
+            class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
           >
             Links
           </li>
           <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+            v-for="(link, index) in links1"
+            :key="index + '1'"
+            class="sm:pt-[17px] pt-3"
           >
-            <a href="#">Home</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">About us</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Bookings</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Blog</a>
+            <a
+              :href="link.url"
+              class="text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+              >{{ link.text }}</a
+            >
           </li>
         </ul>
         <ul>
           <li
-            class="sm:pb-3 text-white font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
+            class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
           >
             Legal
           </li>
           <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+            v-for="(link, index) in links2"
+            :key="index + '2'"
+            class="sm:pt-[17px] pt-3"
           >
-            <a href="#">Terms of use</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Privacy policy</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Cookie policy</a>
+            <a
+              :href="link.url"
+              class="text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+              >{{ link.text }}</a
+            >
           </li>
         </ul>
         <ul>
           <li
-            class="md:pb-3 text-white font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
+            class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
           >
             Product
           </li>
           <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+            v-for="(link, index) in links3"
+            :key="index + '3'"
+            class="sm:pt-[17px] pt-3"
           >
-            <a href="#">Take tour</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Live chat</a>
-          </li>
-          <li
-            class="sm:pt-[17px] pt-3 text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
-          >
-            <a href="#">Reveiws</a>
+            <a
+              :href="link.url"
+              class="text-white font-normal leading-[140%] tracking-[0.2px] md:text-lg sm:text-base text-sm hover:opacity-60 transition-all duration-300 ease-in-out"
+              >{{ link.text }}</a
+            >
           </li>
         </ul>
         <div>
@@ -127,7 +93,6 @@ import linkedIn from "../components/icons/LinkedIn.vue";
           >
             <a herf="#">Stay up to date</a>
           </p>
-
           <div
             class="md:mt-9 sm:mt-8 mt-6 bg-white p-[5px] flex lg:w-[419px] w-[350px]"
           >
@@ -159,3 +124,40 @@ import linkedIn from "../components/icons/LinkedIn.vue";
     </div>
   </div>
 </template>
+
+<script setup>
+import Facebook from "../components/icons/Facebook.vue";
+import Twitter from "../components/icons/Twitter.vue";
+import Instagram from "../components/icons/Instagram.vue";
+import LinkedIn from "../components/icons/LinkedIn.vue";
+
+const socialMediaIcons = [
+  { icon: Facebook, url: "https://www.facebook.com/" },
+  { icon: Twitter, url: "https://twitter.com/" },
+  { icon: Instagram, url: "https://www.instagram.com/" },
+  { icon: LinkedIn, url: "https://www.linkedin.com/" },
+];
+
+const links1 = [
+  { url: "#", text: "Home" },
+  { title: "", url: "#", text: "About us" },
+  { title: "", url: "#", text: "Bookings" },
+  { title: "", url: "#", text: "Blog" },
+];
+
+const links2 = [
+  { url: "#", text: "Terms of use" },
+  { title: "", url: "#", text: "Privacy policy" },
+  { title: "", url: "#", text: "Cookie policy" },
+];
+
+const links3 = [
+  { url: "#", text: "Take tour" },
+  { title: "", url: "#", text: "Live chat" },
+  { title: "", url: "#", text: "Reviews" },
+];
+</script>
+
+<style scoped>
+/* Add your component-specific styles here */
+</style>

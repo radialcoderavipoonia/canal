@@ -4,7 +4,7 @@
       class="container xl:max-w-[1344px] px-3 mx-auto lg:py-[150px] md:py-20 sm:py-16 py-14"
     >
       <h2
-        class="text-center font-bold lg:text-[50px] md:text-[40px] sm:text-[30px] text-[28px] leading-[120%] text-lightBlack"
+        class="text-center font-bold lg:text-[50px] md:text-[40px] sm:text-[30px] text-[28px] leading-[120%] text-lightBlack" data-aos="fade-down"
       >
         Turn The Tide In Minutes
       </h2>
@@ -12,20 +12,20 @@
         <div
           class="relative z-30 flex md:flex-row flex-col items-center xl:gap-[88px] lg:gap-16 gap-10"
         >
-          <div class="md:w-full sm:w-[60%] w-[70%]">
+          <div class="md:w-full sm:w-[60%] w-[70%]" data-aos="fade-right">
             <img
               src="../assets/images/turn-tide/phone-left-box.webp"
               alt="left box canal"
             />
           </div>
-          <div class="md:w-full sm:w-[60%] w-[70%]">
+          <div class="md:w-full sm:w-[60%] w-[70%]" data-aos="zoom-out">
             <img
               src="../assets/images/turn-tide/canal-phone.webp"
               alt="canal phone"
               class="object-cover"
             />
           </div>
-          <div class="md:w-full sm:w-[60%] w-[70%]">
+          <div class="md:w-full sm:w-[60%] w-[70%]" data-aos="fade-left">
             <img
               src="../assets/images/turn-tide/phone-right-box.webp"
               alt="right box canal"
