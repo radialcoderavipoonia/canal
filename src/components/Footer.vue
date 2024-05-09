@@ -1,9 +1,13 @@
 <template>
+  <!-- Main footer section -->
   <div class="bg-lightBlack lg:pt-[104px] md:pt-20 sm:pt-16 pt-14">
+    <!-- Footer container -->
     <div
       class="container xl:max-w-[1344px] px-3 mx-auto lg:pb-[84px] md:pb-20 sm:pb-16 pb-14"
     >
+      <!-- Footer content -->
       <div class="flex justify-between flex-wrap md:gap-20 gap-14">
+        <!-- Company logo and social media links -->
         <div>
           <a href="#">
             <img
@@ -16,6 +20,7 @@
           >
             Follow Us
           </p>
+          <!-- Social media icons -->
           <div class="flex gap-3 items-center md:pt-5 sm:pt-4 pt-3">
             <a
               v-for="(item, index) in socialMediaIcons"
@@ -28,6 +33,7 @@
             </a>
           </div>
         </div>
+        <!-- Navigation links -->
         <ul>
           <li
             class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
@@ -46,6 +52,7 @@
             >
           </li>
         </ul>
+        <!-- Legal links -->
         <ul>
           <li
             class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
@@ -64,6 +71,7 @@
             >
           </li>
         </ul>
+        <!-- Product links -->
         <ul>
           <li
             class="text-white font-bold sm:pb-3 xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%]"
@@ -82,6 +90,7 @@
             >
           </li>
         </ul>
+        <!-- Newsletter subscription -->
         <div>
           <p
             class="font-bold xl:text-2xl md:text-[20px] sm:text-lg text-base leading-[120%] text-white"
@@ -114,7 +123,9 @@
         </div>
       </div>
     </div>
+    <!-- Divider line -->
     <div class="bg-white w-full h-[1px]"></div>
+    <!-- Copyright information -->
     <div class="md:py-5 sm:py-4 py-3">
       <p
         class="text-white text-center font-normal md:text-lg sm:text-base text-sm leading-[140%] tracking-[0.2px]"
@@ -131,6 +142,7 @@ import Twitter from "../components/icons/Twitter.vue";
 import Instagram from "../components/icons/Instagram.vue";
 import LinkedIn from "../components/icons/LinkedIn.vue";
 
+// Social media icons data
 const socialMediaIcons = [
   { icon: Facebook, url: "https://www.facebook.com/" },
   { icon: Twitter, url: "https://twitter.com/" },
@@ -138,6 +150,7 @@ const socialMediaIcons = [
   { icon: LinkedIn, url: "https://www.linkedin.com/" },
 ];
 
+// Navigation links data
 const links1 = [
   { url: "#", text: "Home" },
   { title: "", url: "#", text: "About us" },
@@ -145,12 +158,14 @@ const links1 = [
   { title: "", url: "#", text: "Blog" },
 ];
 
+// Legal links data
 const links2 = [
   { url: "#", text: "Terms of use" },
   { title: "", url: "#", text: "Privacy policy" },
   { title: "", url: "#", text: "Cookie policy" },
 ];
 
+// Product links data
 const links3 = [
   { url: "#", text: "Take tour" },
   { title: "", url: "#", text: "Live chat" },
@@ -159,5 +174,5 @@ const links3 = [
 </script>
 
 <style scoped>
-/* Add your component-specific styles here */
+/* Add any scoped styles here */
 </style>

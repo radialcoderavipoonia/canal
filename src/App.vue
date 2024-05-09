@@ -24,9 +24,9 @@ import Footer from "./components/Footer.vue";
 export default {
   mounted() {
     AOS.init({
-      duration: 1000,
+      duration: 900,
       easing: "ease-in-out",
-      once: true, // whether animation should only happen once - while scrolling down
+      once: true,
     });
   },
 };
