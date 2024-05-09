@@ -23,7 +23,7 @@ import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
           </p>
           <div class="md:pt-[50px] sm:pt-10 pt-8">
             <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div class="flex items-center gap-5">
                 <span><CheckingCashing /></span>
@@ -42,7 +42,7 @@ import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
           </div>
           <div class="md:pt-[30px] sm:pt-7 pt-6">
             <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div class="flex items-center gap-5">
                 <span><remittance /></span>
@@ -61,7 +61,7 @@ import PrepaidCardReload from "../components/icons/PrepaidCardReload.vue";
           </div>
           <div class="md:pt-[30px] sm:pt-7 pt-6">
             <div
-              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-110 transition-all duration-300 ease-in-out"
+              class="bg-white flex justify-between items-center xl:px-[30px] sm:px-6 px-3 md:py-[25px] sm:py-6 py-4 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <div class="flex items-center gap-5">
                 <span><PrepaidCardReload /></span>
