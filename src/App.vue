@@ -17,9 +17,6 @@ import Footer from "./components/Footer.vue";
     <FightingFinance />
     <TurnTheTide />
     <Footer />
-    <div>
-      gnrfdsm
-    </div>
   </div>
 </template>
 
